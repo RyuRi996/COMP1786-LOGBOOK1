@@ -78,8 +78,9 @@ public class MainActivity extends AppCompatActivity {
                 if (input==null){
                     input = "";
                 }
-                if ( getDataButton.equals("+") || getDataButton.equals("-")
-                    || getDataButton.equals("/")){
+                if ( getDataButton.equals("+") ||
+                     getDataButton.equals("-") ||
+                     getDataButton.equals("/") ) {
                     calculate();
                 }
                 input += getDataButton;
@@ -91,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
         if(input.split("\\+").length == 2){
             String numbers[] = input.split("\\+");
             try {
-                double plus = Double.parseDouble(numbers[0]) + Double.parseDouble(numbers[1]);
+                double plus = Double.parseDouble(numbers[0])
+                        + Double.parseDouble(numbers[1]);
                 input = plus + "";
             } catch (Exception e){
                 Log.e("Error input", input);
@@ -99,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
         }else if(input.split("\\*").length == 2){
             String numbers[] = input.split("\\*");
             try {
-                double multi = Double.parseDouble(numbers[0]) * Double.parseDouble(numbers[1]);
+                double multi = Double.parseDouble(numbers[0])
+                        * Double.parseDouble(numbers[1]);
                 input = multi + "";
             } catch (Exception e){
                 Log.e("Error input", input);
@@ -107,7 +110,8 @@ public class MainActivity extends AppCompatActivity {
         }else if(input.split("\\/").length == 2){
             String numbers[] = input.split("\\/");
             try {
-                double div = Double.parseDouble(numbers[0]) / Double.parseDouble(numbers[1]);
+                double div = Double.parseDouble(numbers[0])
+                        / Double.parseDouble(numbers[1]);
                 input = div + "";
             } catch (Exception e){
                 Log.e("Error input", input);
@@ -121,17 +125,21 @@ public class MainActivity extends AppCompatActivity {
             try {
                 double minus = 0;
                 if (numbers.length == 2){
-                    minus = Double.parseDouble(numbers[0]) - Double.parseDouble(numbers[1]);
+                    minus = Double.parseDouble(numbers[0])
+                            - Double.parseDouble(numbers[1]);
                 }
                 else if (numbers.length == 3){
                     if (numbers[0].length()>0){
-                        minus =  Double.parseDouble(numbers[0]) + Double.parseDouble(numbers[2]);
+                        minus =  Double.parseDouble(numbers[0])
+                                + Double.parseDouble(numbers[2]);
                     } else {
-                        minus = - Double.parseDouble(numbers[1]) - Double.parseDouble(numbers[2]);
+                        minus = - Double.parseDouble(numbers[1])
+                                - Double.parseDouble(numbers[2]);
                     }
                 }
                 else if (numbers.length == 4){
-                    minus = - Double.parseDouble(numbers[1]) + Double.parseDouble(numbers[3]);
+                    minus = - Double.parseDouble(numbers[1])
+                            + Double.parseDouble(numbers[3]);
                 }
                 input = minus + "";
             } catch (Exception e){
