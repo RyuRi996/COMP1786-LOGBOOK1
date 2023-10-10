@@ -8,6 +8,16 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:text="Calculator"
+        android:fontFamily="@font/avob"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/firstScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,6 +60,7 @@
 
         <TextView
             android:id="@+id/secondScreen"
+            style="@style/textViewScreen"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text=""
